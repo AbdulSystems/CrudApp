@@ -1,0 +1,9 @@
+<div class="container show">
+
+<h1><%= @article.title %></h1>
+<h3><%= @article.description %></h3>
+
+<%= button_to "Edit this article", edit_article_path(@article), :class => "btn btn-secondary control-button", :method => :get %>
+
+</div>
+

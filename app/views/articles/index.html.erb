@@ -1,0 +1,26 @@
+<div class="container">
+<table class="table articles">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Description</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @articles.each_with_index do |article, index| %>
+    <tr>
+      <th scope="row"><%= index+1 %></th>
+      <td><%= link_to "#{article.title}" , article_path(article)  %> </td>
+      <td><%= article.description %></td>
+      <td><%= link_to "Edit", "articles/#{article.id}/edit" %></td>
+      <td><%= link_to "Delete", article_path(article), method: :delete, data: {confirm: "Are you sure to perform this operation?"} %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= button_to "Create new artcile", new_article_path, :class => "btn btn-primary control-button", :method => :get %>
+</div>

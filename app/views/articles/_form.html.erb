@@ -1,0 +1,17 @@
+<%= render 'error_messages' %>
+
+<!-- Example taken from: http://simple-form-bootstrap.plataformatec.com.br/documentation -->
+
+
+<%= simple_form_for(@article) do |f| %>
+  
+  <%= f.label :title %>
+  <%= f.text_field :title, class: "fields"%> <br/>
+  
+
+  <%= f.label :description %>
+  <%= f.text_area :description, rows: 6, class: "fields description-field" %> <br/>
+
+  <%= f.button :submit, class: "btn-primary", style: "margin-top:3%;" %>
+
+<% end %>
