@@ -18,3 +18,18 @@
    .show{
        margin-top:3%;
    }
+
+   .chip {
+    padding: 0 25px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    margin-top:1%;
+    border-bottom: 1px solid #F0E68C;
+    background-color: #f1f1f1;
+  }
+
+  .image-display{
+      width:100%;
+      min-height:200px;
+  }
